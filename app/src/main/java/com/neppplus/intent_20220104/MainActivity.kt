@@ -17,8 +17,12 @@ class MainActivity : AppCompatActivity() {
 
 //            view_message로 이동하기
             val myIntent = Intent(this, ViewMessageActivity::class.java)
-            startActivity(myIntent)
 
+//            myIntent에 추가 정보 담기(여러개의 데이터 추가도 가능함)
+            myIntent.putExtra("message", inputMessage)
+//            myIntent.putExtra("또추가", ~~)
+
+            startActivity(myIntent)
         }
 
 
