@@ -10,6 +10,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btnSendMessage.setOnClickListener {
+
+//            입력한 내용 가져오기
+            val inputMessage = edtMessage.text.toString()
+
+//            view_message로 이동하기
+            val myIntent = Intent(this, ViewMessageActivity::class.java)
+            startActivity(myIntent)
+
+        }
+
+
+
         btnMoveToOther.setOnClickListener {
 
 //            Intent를 이용해서 다른 화면으로 이동
